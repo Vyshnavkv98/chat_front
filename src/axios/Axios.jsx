@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const Axios = axios.create({
-  baseURL: 'http://localhost:5000/', // Set your base URL here
+  baseURL: 'https://chat-backend-2aqv.onrender.com/', // Set your base URL here
   withCredentials: true, // Include cookies in requests
   headers: {
     'Content-Type': 'application/json',
