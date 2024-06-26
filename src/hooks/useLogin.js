@@ -21,6 +21,7 @@ const useLogin = () => {
 			console.log(res.data,'dfgdfgdfgdf	');
 
 			localStorage.setItem("chat-user", JSON.stringify(res.data));
+			localStorage.setItem("jwt-token", JSON.stringify(res.data.token));
 			setAuthUser(res.data);
 		} catch (error) {
 			toast.error(error.message);

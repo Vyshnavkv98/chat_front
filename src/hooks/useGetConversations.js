@@ -10,7 +10,9 @@ const useGetConversations = () => {
 		const getConversations = async () => {
 			setLoading(true);
 			try {
-                const res = await Axios.get("api/users");
+                const response = await Axios.get('api/users', {
+                    withCredentials: true, // Send cookies
+                  })
 				if (res.error) {
 					throw new Error(res.error);
 				}
